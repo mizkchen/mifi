@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.kingka.ui.ViewController">
+   <children>
+      <VBox layoutX="2.0" layoutY="2.0" spacing="2.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefWidth="780.0" spacing="2.0">
+               <children>
+                  <Label text="主机:" />
+                  <TextField fx:id="host" prefWidth="345.0" promptText="IP地址,例如:127.0.0.1" />
+                  <Label text="端口:" />
+                  <TextField fx:id="port" prefWidth="109.0" promptText="0~65535" />
+                  <Label text="密码:" />
+                  <PasswordField fx:id="password" prefWidth="192.0" />
+                  <Button fx:id="btnConnect" mnemonicParsing="false" onAction="#onConnect" text="连接" />
+               </children>
+            </HBox>
+            <TabPane fx:id="tabCard" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="共享文件">
+                     <content>
+                        <VBox prefWidth="780.0" spacing="2.0">
+                           <children>
+                              <TableView fx:id="sharedFiles" prefHeight="604.0" prefWidth="780.0" />
+                              <HBox alignment="CENTER_RIGHT" prefWidth="200.0" spacing="2.0">
+                                 <children>
+                                    <Button fx:id="btnAddToListAll" mnemonicParsing="false" onAction="#onAddToListAll" text="全部下载" />
+                                    <Button fx:id="btnAddToList" mnemonicParsing="false" onAction="#onAddToList" text="添加到下载列表" />
+                                    <Button fx:id="btnRefreshSharedFiles" mnemonicParsing="false" onAction="#onRefreshFiles" text="刷新列表" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </content>
+                </Tab>
+                <Tab text="正在下载">
+                     <content>
+                        <VBox prefWidth="780.0" spacing="2.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefWidth="200.0" spacing="2.0">
+                                 <padding>
+                                    <Insets top="2.0" />
+                                 </padding>
+                                 <children>
+                                    <Label text="存储地址:" />
+                                    <TextField fx:id="downloadFolder" prefHeight="27.0" prefWidth="684.0" />
+                                    <Button fx:id="btnChooseDownloadFolder" mnemonicParsing="false" onAction="#onChooseDownloadFolder" text="浏览" />
+                                 </children>
+                              </HBox>
+                              <TableView fx:id="downloadFiles" prefHeight="574.0" prefWidth="780.0" />
+                              <HBox alignment="CENTER_RIGHT" prefWidth="200.0" spacing="2.0">
+                                 <children>
+                                    <Button fx:id="btnCancelDownload" mnemonicParsing="false" onAction="#onCancelDownload" text="取消下载" />
+                                    <Button fx:id="btnDownload" mnemonicParsing="false" onAction="#onDownload" text="下载文件" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </content>
+                </Tab>
+                  <Tab text="正在上传">
+                     <content>
+                        <VBox prefWidth="780.0" spacing="2.0">
+                           <children>
+                              <TableView fx:id="uploadFiles" prefHeight="604.0" prefWidth="780.0" />
+                              <HBox alignment="CENTER_RIGHT" prefWidth="200.0" spacing="2.0">
+                                 <children>
+                                    <Button fx:id="btnCancelUpload" mnemonicParsing="false" onAction="#onCancelUpload" text="取消上传" />
+                                    <Button fx:id="btnUpload" mnemonicParsing="false" onAction="#onUpload" text="一键上传" />
+                                    <Button fx:id="btnAddToUploadList" mnemonicParsing="false" onAction="#onAddToUploadList" text="添加文件" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </content>
+                  </Tab>
+                  <Tab text="历史纪录">
+                     <content>
+                        <VBox spacing="2.0">
+                           <children>
+                              <TableView fx:id="historyFiles" prefHeight="604.0" prefWidth="780.0" />
+                              <HBox alignment="CENTER_RIGHT" spacing="2.0">
+                                 <children>
+                                    <Button fx:id="btnOpenFolder" mnemonicParsing="false" onAction="#onOpenFolder" text="打开所在目录" />
+                                    <Button fx:id="btnRemoveHistory" mnemonicParsing="false" onAction="#onRemoveHistory" text="删除历史纪录" />
+                                    <Button fx:id="btnClearHistoryFiles" mnemonicParsing="false" onAction="#onClearHistoryFiles" text="清除历史纪录" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="2.0" right="2.0" />
+   </padding>
+</Pane>

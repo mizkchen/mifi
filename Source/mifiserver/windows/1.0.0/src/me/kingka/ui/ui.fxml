@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.kingka.ui.ViewController">
+   <children>
+      <VBox alignment="CENTER" fillWidth="false" layoutX="2.0" layoutY="2.0" spacing="2.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" spacing="2.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="同步密码:">
+                     <HBox.margin>
+                        <Insets top="2.0" />
+                     </HBox.margin></Label>
+                  <PasswordField fx:id="password" layoutX="73.0" layoutY="10.0" prefHeight="23.0" prefWidth="150.0" />
+                  <Label text="端口:" />
+                  <TextField fx:id="port" prefWidth="80.0" promptText="1到65535" />
+                  <Label text="上传地址:" />
+                  <TextField fx:id="storage" prefHeight="23.0" prefWidth="368.0" />
+                  <Button fx:id="btnChooseStorage" mnemonicParsing="false" onAction="#onChooseStorage" text="浏览" />
+               </children>
+            </HBox>
+            <TableView fx:id="tableView" layoutX="14.0" layoutY="40.0" prefHeight="638.0" prefWidth="780.0">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </TableView>
+            <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="767.0" spacing="2.0">
+               <children>
+                  <Button fx:id="btnAdd" layoutX="14.0" layoutY="767.0" mnemonicParsing="false" onAction="#onAddFile" text="添加文件" />
+                  <Button fx:id="btnDelete" layoutX="85.0" layoutY="767.0" mnemonicParsing="false" onAction="#onDeleteFile" text="删除文件" />
+                  <Label fx:id="lbInfo" alignment="CENTER" layoutX="157.0" layoutY="767.0" prefHeight="23.0" prefWidth="582.0" textAlignment="CENTER" textFill="RED" />
+                  <Button fx:id="btnSync" mnemonicParsing="false" onAction="#onSync" text="启动服务" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

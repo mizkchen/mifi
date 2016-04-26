@@ -1,0 +1,28 @@
+{
+    "locale": "zh_CN",
+    "i18n": {
+        "ui.controller.001": "开启服务",
+        "ui.controller.002": "服务已关闭,停止监听",
+        "ui.controller.003": "关闭服务",
+        "ui.controller.004": "服务已启动,监听端口:%d",
+        "ui.controller.005": "选择共享文件",
+        "ui.controller.006": "请选择正确的上传目录目录",
+        "ui.controller.007": "端口必须是0到65535",
+        "ui.controller.column0": "图示",
+        "ui.controller.column1": "文件",
+        "ui.controller.column2": "类别",
+        "ui.controller.column3": "大小",
+        "ui.title": "MiFi文件传输",
+        "ui.alert.title": "退出",
+        "ui.alert.message": "退出将终止正在进行的任务,是否继续",
+        "ui.information.title": "提示",
+        "fv": "视频",
+        "fm": "音乐",
+        "fa": "应用程序",
+        "fp": "照片",
+        "ff": "文档",
+        "menu.1": "添加文件",
+        "menu.2": "删除文件",
+        "menu.3": "【开启/关闭】服务"
+    }
+}
