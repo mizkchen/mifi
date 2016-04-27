@@ -18,8 +18,3 @@ _[Inno Setup](http://www.jrsoftware.org/isinfo.php)_
 
 ### 下载地址
 _[百度云](http://pan.baidu.com/s/1boD6e1h)_
-
-### 软件截图
-![截图1]({{site.baseurl}}//screenshot1.png)
-![截图2]({{site.baseurl}}//screenshot2.png)
-![截图3]({{site.baseurl}}//screenshot3.png)
