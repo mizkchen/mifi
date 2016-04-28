@@ -1,0 +1,6 @@
+{
+  "port": 8804,
+  "storage": "/home/data",
+  "password": "12345678",
+  "files": []
+}
